@@ -1,0 +1,25 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'mainapp/css/bootstrap.min.css' %}">
+</head>
+<body>
+    
+
+{% block content %}
+
+
+<div style="background-color: lightblue; height: 90vh; display: flex; align-items: center; justify-content: center;">
+    <h1 style="color: white;">Welcome to Student Portal</h1>
+</div>
+
+{% endblock %}
+<script src="{% static 'mainapp/css/bootstrap.min.js' %}"></script>
+
+</body>
+</html>

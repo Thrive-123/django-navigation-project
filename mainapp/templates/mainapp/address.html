@@ -1,0 +1,32 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+<h2>Students Details</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Age</th>
+        <th>Eligible for Vote</th>
+    </tr>
+
+    {% for student in students %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.branch }}</td>
+        <td>{{ student.age }}</td>
+        <td>
+            {% if student.age >= 18 %}
+                Yes
+            {% else %}
+                No
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
